@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 66, "column": 0}, "map": {"version":3,"sources":["file:///Users/koji/Desktop/auth/src/app/api/auth/logout/route.ts"],"sourcesContent":["// src/app/api/auth/logout/route.ts\n\nimport { cookies } from \"next/headers\";\nimport { NextResponse } from \"next/server\";\n\n// Handles POST requests to log the user out\nexport async function POST() {\n    // Get the cookies interface (no need for await here, it's synchronous)\n    const cookieStore = await cookies();\n\n    /* Overwrite the 'auth_token' cookie with an empty value and an expiration \n    date in the past effectively removing the cookie immediately */\n    cookieStore.set(\"auth_token\", \"\", {\n        httpOnly: true,\n        secure: process.env.NODE_ENV === \"production\", // Only secure in production\n        sameSite: \"strict\",\n        expires: new Date(0), // Expire instantly\n    });\n\n    // Report successful logout\n    return NextResponse.json({ message: \"Logged out\" });\n}\n"],"names":[],"mappings":"AAAA,mCAAmC;;;;AAEnC;AACA;;;AAGO,eAAe;IAClB,uEAAuE;IACvE,MAAM,cAAc,MAAM,CAAA,GAAA,iIAAA,CAAA,UAAO,AAAD;IAEhC;iEAC6D,GAC7D,YAAY,GAAG,CAAC,cAAc,IAAI;QAC9B,UAAU;QACV,QAAQ,oDAAyB;QACjC,UAAU;QACV,SAAS,IAAI,KAAK;IACtB;IAEA,2BAA2B;IAC3B,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;QAAE,SAAS;IAAa;AACrD","debugId":null}}]
+}
