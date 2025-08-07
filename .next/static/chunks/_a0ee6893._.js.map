@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/koji/Desktop/auth/src/app/page.tsx"],"sourcesContent":["\"use client\";\n\nimport { useRouter } from \"next/navigation\";\n\nexport default function Page() {\n  const router = useRouter();\n  router.push(\"/sign-in\");\n}\n"],"names":[],"mappings":";;;AAEA;;AAFA;;AAIe,SAAS;;IACtB,MAAM,SAAS,CAAA,GAAA,qIAAA,CAAA,YAAS,AAAD;IACvB,OAAO,IAAI,CAAC;AACd;GAHwB;;QACP,qIAAA,CAAA,YAAS;;;KADF","debugId":null}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":["file:///Users/koji/Desktop/auth/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0],"debugId":null}}]
+}
