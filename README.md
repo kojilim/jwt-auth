@@ -50,7 +50,7 @@ npm run db:push
 ```bash 
 npx ts-node scripts/seed-user.ts
 ```
-Or, if you've added a sceipt in package.json
+Or, if you've added your own script in package.json
 ```bash
 npm run seed:user
 ```
