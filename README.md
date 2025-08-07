@@ -1,7 +1,7 @@
 # WeRoster JWT Authenticator (Next.js + Drizzle + MySQL + JWT)
 
 This project is an authentication protocol intended for proposed use for WeRoster's applications using Next.js 15, Drizzle ORM, MySQL, bcrypt, and JWT (via [jose](https://github.com/panva/jose)).  
-It demonstrates secure login/logout with protected dashboard routes.
+It aims to ensure secure login/logout with protected dashboard routes.
 
 ---
 
