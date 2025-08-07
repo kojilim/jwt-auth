@@ -44,7 +44,7 @@ export async function POST(req: Request) {
             );
         }
 
-        const token = signToken({ userId: user.id, role: user.role });
+        const token = await signToken({ userId: user.id, role: user.role });
 
         const cookieStore = await cookies();
         cookieStore.set("auth_token", token, {

@@ -25,6 +25,7 @@ export default function SignInPage() {
         const data = await res.json();
 
         if (res.ok && data.success) {
+            console.log("Redirecting to dashboard...");
             router.push("/dashboard");
         } else {
             setError(data.message || "Login failed");
